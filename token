@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activation Key</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+    .container {
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #444;
+      border-radius: 10px;
+      background-color: #222; /* Dark gray box background */
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    #activationKey {
+      font-size: 16px;
+      padding: 10px;
+      background-color: #333; /* Slightly lighter gray for the key background */
+      border: 1px solid #444;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      display: inline-block;
+      color: #fff; /* White key text */
+    }
+    .copy-btn {
+      background-color: #00bcd4; /* Cyan button */
+      color: #000; /* Black text for contrast */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .copy-btn:hover {
+      background-color: #008c9e; /* Darker cyan on hover */
+    }
+    .instructions {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #aaa; /* Light gray for instructions */
+    }
+    .instructions a {
+      color: #00bcd4; /* Cyan link */
+      text-decoration: none;
+    }
+    .instructions a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="activationKey">
+      ACTIVATION_KEY_93Fz8H2lM7JvY6wQdZpB5RkX0tVr4J1UqGzC8WkLz9T5OPXa47YmN2QW3R8KL9Zv5JtMX6CqN0RwP7BZLY834JXZPQWMNTR6VK1209
+    </div>
+    <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+  </div>
+  <div class="instructions">
+    <p>Copy this activation key token and send (paste) it to the <a href="https://t.me/pinkyponkybot" target="_blank">PinkyPonky Bot</a> on Telegram!</p>
+  </div>
+
+  <script>
+    function copyToClipboard() {
+      const activationKey = document.getElementById("activationKey").innerText;
+      navigator.clipboard.writeText(activationKey).then(() => {
+        alert("Activation key copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy: " + err);
+      });
+    }
+  </script>
+</body>
+</html>
